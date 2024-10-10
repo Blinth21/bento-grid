@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans';    ;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100vh;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1.3fr 1fr 1fr;
+    gap: 20px;
+    width: 770px;
+    height: 620px;
+}
+
+.item{
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.side-left{
+    grid-column: span 1;
+    grid-row: span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.create-schedule{
+    flex: 1;
+    background-color: hsl(31, 66%, 93%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.create-schedule h2 span{
+    color: hsl(256, 67%, 59%);
+    font-style: italic;
+}
+
+
+h2{
+    font-weight: 550;
+    line-height: 0.9;
+    letter-spacing: -2px;
+}
+
+h3{
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -1px;
+    font-weight: 650;
+}
+
+p{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.write-content{
+    flex: 1;
+    background-color: hsl(39, 100%, 71%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.write-content img{
+    width: 107%;
+}
+
+.social-faster{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 2;
+    grid-row: span 1;
+    color: white;
+    background-color: hsl(256, 67%, 59%);
+    padding: 25px;
+}
+
+
+.social-faster h1{
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.social-faster img{
+    width: 130px;
+    margin-bottom: 9px;
+}
+
+.social-faster p{
+    font-weight: 300;
+}
+
+.social-faster h1 .tenx{color: hsl(39, 100%, 71%);}
+.social-faster h1 .faster{font-style: italic;}
+
+.schedule-social{
+    grid-row: span 2;
+    position: relative;
+    overflow: hidden;
+    background-color: hsl(254, 88%, 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    gap: 10px;
+
+}
+
+.schedule-social img{
+    position: relative;
+    width: 180%;
+}
+
+
+
+.manage-accounts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.manage-accounts img{
+    width: 150%;
+}
+
+.maintain{
+    background-color: hsl(39, 100%, 71%);
+    overflow: hidden;
+}
+
+.maintain img{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.faster-audience{
+    grid-column: span 1;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+}
+
+.faster-audience p span{
+    display: block;
+    font-size: 44px;
+    font-weight: 600;
+}
+
+.faster-audience p{
+    font-size: 12px;
+}
+
+.faster-audience img{
+    width: 90%;
+}
+
+.grow-followers{
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: hsl(256, 67%, 59%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: white;
+}
+
+.grow-followers h2{
+    letter-spacing: -1px;
+}
+
+.grow-followers img{
+    height: 145px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+.attribution a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width:768px) {
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 0.5fr);
+        width: auto;
+        height: auto;
+    }
+
+    .social-faster{
+        order: 0;
+    }
+
+    .manage-accounts .maintain{
+        order: 1;
+    }
+
+    .item{
+        grid-column: span 1;
+    }
+
+    .side-left{
+        order: 5;
+    }
+
+    .grow-followers{
+        order: 3;
+        flex-direction: column;
+        gap: 20px;   
+        padding: 15px 30px;
+        text-align: center;
+    }
+
+    .schedule-social{
+        order: 2;
+    }
+
+    .schedule-social img{
+        width: 100%;
+    }
+
+    .maintain img{
+        width: 70%;
+    }
+
+    .faster-audience{
+        order: 4;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .faster-audience img{
+        width: 70%;
+    }
+
+}
+
